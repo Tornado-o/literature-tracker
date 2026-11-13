@@ -1,4 +1,4 @@
-# Literature Tracker｜跨学科文献追踪
+# Literature Tracker｜最新文献追踪
 
 一个用于 Codex 的文献追踪技能。可以做一次近期文献简报，也可以逐题配置一份持续更新的论文周刊。
 
