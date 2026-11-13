@@ -1,0 +1,91 @@
+{
+  "profile_version": "1.9",
+  "discipline": "教育研究（配置示例）",
+  "reader_goal": "持续追踪教学干预与学习效果的实证研究",
+  "cadence": {
+    "frequency": "weekly",
+    "timezone": "Asia/Shanghai",
+    "run_mode": "manual"
+  },
+  "search": {
+    "first_run_days": 30,
+    "index_backfill_days": 30,
+    "recency_policy": "按领域和可核验事件判断。周刊不硬卡七天。",
+    "directions": [
+      {
+        "id": "intervention",
+        "label": "教学干预与学习效果",
+        "queries": {
+          "zh": [
+            "教学干预 AND 学习效果 AND (随机试验 OR 准实验)"
+          ],
+          "en": [
+            "instructional intervention AND learning outcomes AND (randomized OR quasi-experimental)"
+          ]
+        }
+      },
+      {
+        "id": "measurement",
+        "label": "学习测量",
+        "queries": {
+          "zh": [
+            "学习测量 AND (效度 OR 测量等值)"
+          ],
+          "en": [
+            "learning assessment AND (validity OR measurement invariance)"
+          ]
+        }
+      }
+    ],
+    "source_plan": [
+      {
+        "role": "official",
+        "entry": "配置该方向关键期刊的当期目录和在线先发栏目",
+        "directions": [
+          "intervention",
+          "measurement"
+        ]
+      },
+      {
+        "role": "official",
+        "entry": "配置有关学会的年会论文集和已公布议程",
+        "directions": [
+          "intervention",
+          "measurement"
+        ]
+      },
+      {
+        "role": "discovery",
+        "entry": "配置可用的学科索引、机构仓储和本地语言数据库",
+        "directions": [
+          "intervention",
+          "measurement"
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "markdown",
+    "title": "教育研究最新文献简报",
+    "bilingual_titles": false,
+    "show_star_rating": true
+  },
+  "integrations": {
+    "scheduler": "off",
+    "reference_library": "pending",
+    "external_publishing": "off",
+    "zotero": {
+      "mode": "pending",
+      "parent_collection": "教育研究最新文献简报",
+      "date_collection_pattern": "M.d",
+      "auto_create_missing_collections": true,
+      "cloud_api_key_env": "ZOTERO_API_KEY"
+    }
+  },
+  "screening": {
+    "reading_preference": {
+      "kind": "none",
+      "value": null
+    }
+  }
+}
